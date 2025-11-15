@@ -1,0 +1,46 @@
+Here are the basic commands to run and use your Ambedkar-GPT project from the GitHub repo you shared:
+
+1. Clone the repo (if not already done)
+git clone https://github.com/piyushdalal8/Ambedkar-GPT.git
+cd Ambedkar-GPT
+
+2. Set up your Python environment
+
+It's best to create a virtual environment first:
+
+python -m venv venv
+# Activate it:
+# On Windows:
+venv\Scripts\activate
+# On Linux/macOS:
+source venv/bin/activate
+
+3. Install required packages
+pip install -r requirements.txt
+
+4. Build the vector database from the speech text file
+
+This will chunk the speech, embed it, and store it in the vector DB:
+
+python main.py --build --speech speech.txt
+
+5. Ask a question
+
+This command will query the vector DB and generate an answer using the LLM:
+
+python main.py --ask "What did Ambedkar say about constitution?"
+
+
+Replace the question inside the quotes with whatever you want to ask.
+
+Optional: Serve a local server (if implemented) or run other scripts
+
+Check your repo or code if you have commands to start a local API or web interface, but it looks CLI-based for now.
+
+Summary of important commands:
+Purpose	Command
+Clone repo	git clone https://github.com/piyushdalal8/Ambedkar-GPT.git
+Activate env (Windows)	venv\Scripts\activate
+Install dependencies	pip install -r requirements.txt
+Build vector DB	python main.py --build --speech speech.txt
+Ask question	python main.py --ask "Your question here"
